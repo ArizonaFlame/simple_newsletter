@@ -1,0 +1,24 @@
+<h1>Listing readers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Identity code</th>
+  </tr>
+
+<% for reader in @readers %>
+  <tr>
+    <td><%=h reader.name %></td>
+    <td><%=h reader.email %></td>
+    <td><%=h reader.identity_code %></td>
+    <td><%= link_to 'Show', reader %></td>
+    <td><%= link_to 'Edit', edit_reader_path(reader) %></td>
+    <td><%= link_to 'Destroy', reader, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New reader', new_reader_path %>

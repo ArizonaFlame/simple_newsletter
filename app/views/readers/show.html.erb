@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @reader.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @reader.email %>
+</p>
+
+<p>
+  <b>Identity code:</b>
+  <%=h @reader.identity_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_reader_path(@reader) %> |
+<%= link_to 'Back', readers_path %>
